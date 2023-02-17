@@ -4,20 +4,98 @@
  *
  * http://localhost:8080/account/books/want-to-read
  */
+ ​
+ // Layout
+ .mybooks {
+   display: flex;
+   flex-direction: row;
+   border-top: 0;
+   margin-top: 0;
+   font-size: .9em;
+ }
+ ​
+ .sidebar-section a.dropclick {
+   display: none;
+ }
+ //.sidebar-section .arrow.arrow-activated {
+ //  display: none;
+ //}
+ ​
+ .sidebar-section .dropdown {
+   display: block !important;
+ }
+ ​
+ .sidebar-section .dropdown .my-lists{
+   background-color: inherit !important;
+   padding: 0 !important;
+ }
+ ​
+ .sidebar-section .dropper.on {
+   background-color: inherit !important;
+   box-shadow: none !important;
+ }
+ ​
+ .sidebar-section .create {
+     float: left !important;
+     clear: both;
+ }
+ ​
+ .sidebar-section .create-new-list {
+   align-items: center;
+   position: relative;
+   font-size: .875em !important;
+   width: 100%;
+   display: block;
+   border: 0;
+   border-radius: 5px;
+   //margin-top: 5px;
+   box-sizing: border-box;
+   cursor: pointer;
+   font-family: "Lucida Grande", Verdana, Geneva, Helvetica, Arial, sans-serif;
+   text-align: center;
+   padding: 7px;
+   white-space: nowrap;
+   line-height: 1.5em;
+   transition: background-color 0.2s;
+   background-color: #0376b8;
+   color: #fff !important;
+   text-decoration: none;
+   //max-width: 100px !important;
+   margin: auto !important;
+   font-weight: 700 !important;
+ }
+ ​
+ {
+  @media only screen and (max-width: @width-breakpoint-tablet) {
+   .mybooks {
+     flex-direction: column;
+   }
+ }
+ @import (less) "components/mybooks-list.less";
+ @import (less) "components/mybooks-menu.less";
+ @import (less) "components/mybooks-details.less";
+}
+
+/**
+ * MyBooks
+ * https://github.com/internetarchive/openlibrary/wiki/Design-Pattern-Library#mybooks
+ *
+ * http://localhost:8080/account/books/want-to-read
+ */
 
 // Layout
-.mybooks {
-  display: flex;
-  flex-direction: row;
-  border-top: 0;
-  margin-top: 0;
-  font-size: .9em;
-}
-@media only screen and (max-width: @width-breakpoint-tablet) {
-  .mybooks {
-    flex-direction: column;
-  }
-}
-@import (less) "components/mybooks-list.less";
-@import (less) "components/mybooks-menu.less";
-@import (less) "components/mybooks-details.less";
+// .mybooks {
+//   display: flex;
+//   flex-direction: row;
+//   border-top: 0;
+//   margin-top: 0;
+//   font-size: .9em;
+// }
+// @media only screen and (max-width: @width-breakpoint-tablet) {
+//   .mybooks {
+//     flex-direction: column;
+//   }
+// }
+// @import (less) "components/mybooks-list.less";
+// @import (less) "components/mybooks-menu.less";
+// @import (less) "components/mybooks-details.less";
